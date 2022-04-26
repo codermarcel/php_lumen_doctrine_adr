@@ -1,0 +1,63 @@
+{
+    "name": "laravel/lumen",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/codermarcel/php-encryption.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/codermarcel/EasyRSA.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/codermarcel/halite.git"
+		}
+    ],
+    "require": {
+		"namshi/jose": "5.0.*@dev",
+		"dingo/api": "1.0.*@dev",
+        "php": ">=5.6.4",
+        "laravel/lumen-framework": "5.3.*",
+        "vlucas/phpdotenv": "~2.2",
+        "ramsey/uuid": "^3.5",
+        "defuse/php-encryption": "dev-master",
+        "symfony/var-dumper": "^3.2",
+        "paragonie/sodium_compat": "^0.2.2",
+        "league/fractal": "^0.15.0",
+        "laravel-doctrine/orm": "^1.2",
+        "moneyphp/money": "^3.0",
+        "tymon/jwt-auth": "^0.5.9",
+        "gedmo/doctrine-extensions": "^2.4",
+        "beberlei/DoctrineExtensions": "^1.0",
+        "laravel-doctrine/extensions": "1.0.*"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Domain\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
